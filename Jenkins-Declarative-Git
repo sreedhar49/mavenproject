@@ -18,7 +18,7 @@ pipeline{
                   sh "mv target/*.war target/myweb.war"
               }
            }
-           stage("deploy-dev"){
+           /*stage("deploy-dev"){
                steps{sshagent(['a6bdf55c-74be-43e5-a30d-fbc50c179dd0']) {
                     sh """
                          scp -o StrictHostKeyChecking=no target/myweb.war ec2-user@10.0.1.55:/opt/tomcat10/webapps/
@@ -30,7 +30,7 @@ pipeline{
                     """
                     }
                }
-           }
+           }*/
         }
     }
 git 
